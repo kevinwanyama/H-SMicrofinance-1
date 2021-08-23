@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/basicDashboard"
+            android:title="Dashboad"
+            android:icon="@drawable/ic_home_24"/>
+    </group>
+
+    <item android:title="Transfer">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicPayfriends"
+                android:title="Pay Friends"
+                android:icon="@drawable/ic_friendst_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicPayLoans"
+                android:title="Pay loans"
+                android:icon="@drawable/ic_money_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicWithdrawMoney"
+                android:title="Withdraw Money"
+                android:icon="@drawable/ic_withdraw_24"/>
+        </menu>
+
+    </item>
+    <item android:title="Invest">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicInvestmentPackages"
+                android:title="Investment Packages"
+                android:icon="@drawable/ic_dollar_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicInvestmentHistory"
+                android:title="Investment History"
+                android:icon="@drawable/ic_history_24"/>
+        </menu>
+
+    </item>
+    <item android:title="Quick Loans">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicLoanPackages"
+                android:title="Loan Packages"
+                android:icon="@drawable/ic_loan_package_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicLoanHistory"
+                android:title="Loan History"
+                android:icon="@drawable/ic_loan_history_24"/>
+        </menu>
+
+    </item>
+    <item android:title="Deposit Money">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicEDeposit"
+                android:title="E-Deposit"
+                android:icon="@drawable/ic_deposit_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicDepositHistory"
+                android:title="Deposit History"
+                android:icon="@drawable/ic_deposit_histroy_24"/>
+        </menu>
+
+    </item>
+    <item android:title="Account">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicStatement"
+                android:title="Statement"
+                android:icon="@drawable/ic_statement_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicTransactionHistory"
+                android:title="Transaction History"
+                android:icon="@drawable/ic_baseline_history_transaction_24"/>
+            <item
+                android:checkable="true"
+                android:id="@+id/basicSettings"
+                android:title="Settings"
+                android:icon="@drawable/ic_settings_24"/>
+        </menu>
+
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                
+                android:checkable="true"
+                android:id="@+id/basicSupport"
+                android:title="Support"
+                android:icon="@drawable/ic_support_24"/>
+            <item
+                android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout_24"
+                />
+        </menu>
+
+    </item>
+
+</menu>

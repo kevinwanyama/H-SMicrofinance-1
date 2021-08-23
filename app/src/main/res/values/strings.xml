@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">H&amp;S Microfinance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="premium">Premium</string>
+    <string name="term_condion_4">4.) National Identification Card (Front and Back)</string>
+    <string name="term_condion_3">3.) Passport (Biometric Page)</string>
+    <string name="term_condition_2">2.) Social Security Number (For US Citizens)</string>
+    <string name="term_condition_1">1.) KRA PIN (Kenyan Citizens)</string>
+    <string name="government_id">The Government ID Cards acceptable are</string>
+    <string name="Term_and_conditions">Terms and Conditions</string>
+    <string name="disclaimer">Disclaimer:</string>
+    <string name="disclaimer_1">1.) The form of Government ID attached is subject to verification.</string>
+    <string name="disclaimer_2">2.) Additional proof of identification may be requested to maintain your account privileges at anytime.</string>
+    <string name="disclaimer_3">3.) HS Group Microfinance may suspend the privileges of your account during the verification process.</string>
+    <string name="gold">Gold</string>
+    <string name="basic">Basic</string>
+    <string name="select_your_package">Select your package</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="investheader"><![CDATA[Invest Money with H&S Group]]></string>
+    <string name="standard">Standard</string>
+    <string name="limit_ksh_500_ksh_20000">Limit: Ksh 500 - Ksh 20000</string>
+    <string name="duration_30_days">Duration: 30 Days</string>
+    <string name="return_5">Return: 5%</string>
+    <string name="deposit_now">Deposit Now</string>
+    <string name="limit_ksh_10000_ksh_100000">Limit: Ksh 10000 - Ksh 100000</string>
+    <string name="duration_210_days">Duration: 210 Days</string>
+    <string name="return_7">Return: 7%</string>
+    <string name="platinum">Platinum</string>
+    <string name="limit_ksh_20000_ksh_250000">Limit: Ksh 20000 - Ksh 250000</string>
+    <string name="duration_540_days">Duration: 540 Days</string>
+    <string name="return_10">Return: 10%</string>
+    <string name="loan_package_header"><![CDATA[H&S Group Microfinance offers great rates as low as 2% for qualified applicants. The processing time is 1 to 3 business days]]></string>
+
+</resources>

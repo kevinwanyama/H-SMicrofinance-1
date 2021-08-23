@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basic_nav_graph"
+    app:startDestination="@id/basicDashboard">
+
+    <fragment
+        android:id="@+id/basicDashboard"
+        android:name="com.example.hsmicrofinance.Fragments.BasicDashboard"
+        android:label="fragment_basic_dashboard"
+        tools:layout="@layout/fragment_basic_dashboard" >
+        <action
+            android:id="@+id/action_basicDashboard_to_basicDepositHistory"
+            app:destination="@id/basicDepositHistory" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicEDeposit"
+            app:destination="@id/basicEDeposit" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicInvestmentHistory"
+            app:destination="@id/basicInvestmentHistory" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicLoanHistory"
+            app:destination="@id/basicLoanHistory" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicLoanPackages"
+            app:destination="@id/basicLoanPackages" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicPayLoans"
+            app:destination="@id/basicPayLoans" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicPayfriends"
+            app:destination="@id/basicPayfriends" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicSettings"
+            app:destination="@id/basicSettings" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicStatement"
+            app:destination="@id/basicStatement" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicInvestmentPackages"
+            app:destination="@id/basicInvestmentPackages" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicSupport"
+            app:destination="@id/basicSupport" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicTransactionHistory"
+            app:destination="@id/basicTransactionHistory" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicWithdrawMoney"
+            app:destination="@id/basicWithdrawMoney" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicDepositHistory"
+        android:name="com.example.hsmicrofinance.Fragments.BasicDepositHistory"
+        android:label="fragment_basic_deposit_history"
+        tools:layout="@layout/fragment_basic_deposit_history" />
+    <fragment
+        android:id="@+id/basicEDeposit"
+        android:name="com.example.hsmicrofinance.Fragments.BasicEDeposit"
+        android:label="fragment_basic_e_deposit"
+        tools:layout="@layout/fragment_basic_e_deposit" />
+    <fragment
+        android:id="@+id/basicInvestmentHistory"
+        android:name="com.example.hsmicrofinance.Fragments.BasicInvestmentHistory"
+        android:label="fragment_basic_investment_history"
+        tools:layout="@layout/fragment_basic_investment_history" />
+    <fragment
+        android:id="@+id/basicInvestmentPackages"
+        android:name="com.example.hsmicrofinance.Fragments.BasicInvestmentPackages"
+        android:label="fragment_basic_investment_packages"
+        tools:layout="@layout/fragment_basic_investment_packages" />
+    <fragment
+        android:id="@+id/basicLoanHistory"
+        android:name="com.example.hsmicrofinance.Fragments.BasicLoanHistory"
+        android:label="fragment_basic_loan_history"
+        tools:layout="@layout/fragment_basic_loan_history" />
+    <fragment
+        android:id="@+id/basicLoanPackages"
+        android:name="com.example.hsmicrofinance.Fragments.BasicLoanPackages"
+        android:label="fragment_basic_loan_packages"
+        tools:layout="@layout/fragment_basic_loan_packages" >
+        <action
+            android:id="@+id/action_basicLoanPackages_to_logBookLoan"
+            app:destination="@id/logBookLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_bimaLoan"
+            app:destination="@id/bimaLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_businessLoan"
+            app:destination="@id/businessLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_chamaLoan"
+            app:destination="@id/chamaLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_titleDeedLoan"
+            app:destination="@id/titleDeedLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_personalLoan"
+            app:destination="@id/personalLoan" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_kilimoLoan"
+            app:destination="@id/kilimoLoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicPayLoans"
+        android:name="com.example.hsmicrofinance.Fragments.BasicPayLoans"
+        android:label="fragment_basic_pay_loans"
+        tools:layout="@layout/fragment_basic_pay_loans" />
+    <fragment
+        android:id="@+id/basicPayfriends"
+        android:name="com.example.hsmicrofinance.Fragments.BasicPayfriends"
+        android:label="fragment_basic_payfriends"
+        tools:layout="@layout/fragment_basic_payfriends" />
+    <fragment
+        android:id="@+id/basicSettings"
+        android:name="com.example.hsmicrofinance.Fragments.BasicSettings"
+        android:label="fragment_basic_settings"
+        tools:layout="@layout/fragment_basic_settings" />
+    <fragment
+        android:id="@+id/basicStatement"
+        android:name="com.example.hsmicrofinance.Fragments.BasicStatement"
+        android:label="fragment_basic_statement"
+        tools:layout="@layout/fragment_basic_statement" />
+    <fragment
+        android:id="@+id/basicSupport"
+        android:name="com.example.hsmicrofinance.Fragments.BasicSupport"
+        android:label="fragment_basic_support"
+        tools:layout="@layout/fragment_basic_support" />
+    <fragment
+        android:id="@+id/basicTransactionHistory"
+        android:name="com.example.hsmicrofinance.Fragments.BasicTransactionHistory"
+        android:label="fragment_basic_transaction_history"
+        tools:layout="@layout/fragment_basic_transaction_history" />
+    <fragment
+        android:id="@+id/basicWithdrawMoney"
+        android:name="com.example.hsmicrofinance.Fragments.BasicWithdrawMoney"
+        android:label="fragment_basic_withdraw_money"
+        tools:layout="@layout/fragment_basic_withdraw_money" />
+    <fragment
+        android:id="@+id/logBookLoan"
+        android:name="com.example.hsmicrofinance.Fragments.LogBookLoan"
+        android:label="fragment_log_book_loan"
+        tools:layout="@layout/fragment_log_book_loan" />
+    <fragment
+        android:id="@+id/bimaLoan"
+        android:name="com.example.hsmicrofinance.Fragments.BimaLoan"
+        android:label="fragment_bima_loan"
+        tools:layout="@layout/fragment_bima_loan" />
+    <fragment
+        android:id="@+id/businessLoan"
+        android:name="com.example.hsmicrofinance.Fragments.BusinessLoan"
+        android:label="fragment_business_loan"
+        tools:layout="@layout/fragment_business_loan" />
+    <fragment
+        android:id="@+id/chamaLoan"
+        android:name="com.example.hsmicrofinance.Fragments.ChamaLoan"
+        android:label="fragment_chama_loan"
+        tools:layout="@layout/fragment_chama_loan" />
+    <fragment
+        android:id="@+id/kilimoLoan"
+        android:name="com.example.hsmicrofinance.Fragments.KilimoLoan"
+        android:label="fragment_kilimo_loan"
+        tools:layout="@layout/fragment_kilimo_loan" />
+    <fragment
+        android:id="@+id/personalLoan"
+        android:name="com.example.hsmicrofinance.Fragments.PersonalLoan"
+        android:label="fragment_personal_loan"
+        tools:layout="@layout/fragment_personal_loan" />
+    <fragment
+        android:id="@+id/titleDeedLoan"
+        android:name="com.example.hsmicrofinance.Fragments.TitleDeedLoan"
+        android:label="fragment_title_deed_loan"
+        tools:layout="@layout/fragment_title_deed_loan" />
+</navigation>

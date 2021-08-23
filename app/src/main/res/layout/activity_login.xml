@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Login">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:id="@+id/login_view"/>
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_below="@id/login_view"
+        android:src="@drawable/logo"
+        android:layout_marginTop="100dp"
+        android:id="@+id/logo"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Email"
+        android:backgroundTint="@color/dark_blue"
+        android:padding="6dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/dark_blue"
+        android:drawableLeft="@drawable/ic_email_24"
+        android:drawableTint="@color/dark_blue"
+        android:id="@+id/login_email_input"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_email_input"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Password"
+        android:backgroundTint="@color/dark_blue"
+        android:padding="6dp"
+        android:inputType="textPassword"
+        android:textColor="@color/dark_blue"
+        android:drawableLeft="@drawable/ic_lock_24"
+        android:drawableTint="@color/dark_blue"
+        android:id="@+id/login_password_input"/>
+
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_password_input"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/pink"
+        android:text="Login"
+        android:textColor="#FFF"
+        android:id="@+id/login_btn"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@id/login_btn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? " />
+
+        <TextView
+            android:id="@+id/signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Register"
+            android:textColor="@color/dark_blue" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragment_background"
+    tools:context=".Fragments.BasicInvestmentPackages">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/investheader"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:textColor="@color/dark_green"
+            android:layout_marginTop="20dp"
+            android:id="@+id/investheader"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/investheader"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/standard_card">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/standard"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_blue"
+                    android:id="@+id/std_text"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/limit_ksh_500_ksh_20000"
+                    android:layout_below="@id/std_text"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_blue"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:id="@+id/std_range"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration_30_days"
+                    android:layout_below="@id/std_range"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/std_days"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/return_5"
+                    android:layout_below="@id/std_days"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/std_return"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/deposit_now"
+                    android:layout_below="@+id/std_return"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/dark_green"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/std_deposit_btn"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/standard_card"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gold_card"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gold"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_blue"
+                    android:id="@+id/gold_text"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/limit_ksh_10000_ksh_100000"
+                    android:layout_below="@id/gold_text"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_blue"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:id="@+id/gold_range"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration_210_days"
+                    android:layout_below="@id/gold_range"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/gold_days"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/return_7"
+                    android:layout_below="@id/gold_days"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/gold_return"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:padding="7dp"
+                    android:text="@string/deposit_now"
+                    android:layout_below="@+id/gold_return"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/dark_green"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/gold_deposit_btn"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gold_card"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Platinum_card"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_margin="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/platinum"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_blue"
+                    android:id="@+id/platinum_text"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/limit_ksh_20000_ksh_250000"
+                    android:layout_below="@id/platinum_text"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_blue"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:id="@+id/platinum_range"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration_540_days"
+                    android:layout_below="@id/platinum_range"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/platinum_days"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/return_10"
+                    android:layout_below="@id/platinum_days"
+                    android:textColor="@color/dark_blue"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/platinum_return"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:padding="7dp"
+                    android:text="@string/deposit_now"
+                    android:layout_below="@+id/platinum_return"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/dark_green"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/platinum_deposit_btn"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</RelativeLayout>
