@@ -2,7 +2,11 @@ package com.example.hsmicrofinance.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +19,7 @@ import com.example.hsmicrofinance.databinding.FragmentBasicInvestmentPackagesBin
 public class BasicInvestmentPackages extends Fragment {
 
     FragmentBasicInvestmentPackagesBinding mFragmentBasicInvestmentPackagesBinding;
+    private NavController mNavController;
 
     public BasicInvestmentPackages() {
         // Required empty public constructor
@@ -30,5 +35,15 @@ public class BasicInvestmentPackages extends Fragment {
         // Inflate the layout for this fragment
         mFragmentBasicInvestmentPackagesBinding = FragmentBasicInvestmentPackagesBinding.inflate(inflater,container,false);
         return mFragmentBasicInvestmentPackagesBinding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mNavController = Navigation.findNavController(view);
+
+        mFragmentBasicInvestmentPackagesBinding.goldDepositBtn.setOnClickListener(v-> mNavController.navigate(R.id.action_basicInvestmentPackages_to_goldDeposit));
+        mFragmentBasicInvestmentPackagesBinding.platinumDepositBtn.setOnClickListener(v-> mNavController.navigate(R.id.action_basicInvestmentPackages_to_platinumDeposit));
+        mFragmentBasicInvestmentPackagesBinding.stdDepositBtn.setOnClickListener(v->mNavController.navigate(R.id.action_basicInvestmentPackages_to_standardDeposit));
     }
 }

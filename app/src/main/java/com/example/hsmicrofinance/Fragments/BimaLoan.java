@@ -17,7 +17,8 @@ import com.example.hsmicrofinance.databinding.FragmentBimaLoanBinding;
 public class BimaLoan extends Fragment {
 
 
-FragmentBimaLoanBinding mFragmentBimaLoanBinding;
+    FragmentBimaLoanBinding mFragmentBimaLoanBinding;
+
     public BimaLoan() {
         // Required empty public constructor
     }
@@ -27,24 +28,28 @@ FragmentBimaLoanBinding mFragmentBimaLoanBinding;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentBimaLoanBinding = FragmentBimaLoanBinding.inflate(inflater,container,false);
-        return inflater.inflate(R.layout.fragment_bima_loan, container, false);
+        mFragmentBimaLoanBinding = FragmentBimaLoanBinding.inflate(inflater, container, false);
+        return mFragmentBimaLoanBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFragmentBimaLoanBinding.bimaLoanRequestBtn.setOnClickListener(
-                v-> bimaRequestLoan()
-        );
+        mFragmentBimaLoanBinding.bimaLoanRequestBtn.setOnClickListener(v -> bimaRequestLoan());
     }
 
     private void bimaRequestLoan() {
-        if(Integer.parseInt(mFragmentBimaLoanBinding.bimaLoanEditText.getText().toString()) < 10000){
+        if (mFragmentBimaLoanBinding.bimaLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentBimaLoanBinding.bimaErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentBimaLoanBinding.bimaLoanEditText.getText().toString()) < 10000) {
             mFragmentBimaLoanBinding.bimaErrorText.setText("Please enter amount above 10000");
-        }
-        else if(Integer.parseInt(mFragmentBimaLoanBinding.bimaLoanEditText.getText().toString()) > 250000){
+        } else if (Integer.parseInt(mFragmentBimaLoanBinding.bimaLoanEditText.getText().toString()) > 250000) {
             mFragmentBimaLoanBinding.bimaErrorText.setText("Should not exceed 250000000");
+        } else {
+            handleBimaLoanRequest();
         }
+    }
+
+    private void handleBimaLoanRequest() {
     }
 }

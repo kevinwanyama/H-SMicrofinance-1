@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.BasicDashboard"
-    android:background="@color/fragment_background">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragment_background"
+    tools:context=".Fragments.BasicDashboard">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -146,6 +147,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/latest_transaction_text"
         android:text="Latest Transactions"
         android:layout_below="@id/dashboard_linear_layout"
         android:layout_centerHorizontal="true"
@@ -153,5 +155,48 @@
         android:layout_marginTop="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         />
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/transaction_top"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/latest_transaction_text"
+        android:layout_centerHorizontal="true"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/dark_blue"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_gravity="right"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/transaction_top"
+        tools:listitem="@layout/latest_transactions"
+        android:layout_centerHorizontal="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/latest_transaction_recyclerview"/>
+
 
 </RelativeLayout>

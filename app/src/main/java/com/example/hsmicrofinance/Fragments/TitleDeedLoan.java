@@ -23,27 +23,26 @@ public class TitleDeedLoan extends Fragment {
     }
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentTitleDeedLoanBinding = FragmentTitleDeedLoanBinding.inflate(inflater,container,false);
+        mFragmentTitleDeedLoanBinding = FragmentTitleDeedLoanBinding.inflate(inflater, container, false);
         return mFragmentTitleDeedLoanBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFragmentTitleDeedLoanBinding.titledeedLoanRequestBtn.setOnClickListener(v-> titleDeedRequestloan());
+        mFragmentTitleDeedLoanBinding.titledeedLoanRequestBtn.setOnClickListener(v -> titleDeedRequestloan());
     }
 
     private void titleDeedRequestloan() {
-        if(Integer.parseInt(mFragmentTitleDeedLoanBinding.titledeedLoanEditText.getText().toString()) < 25000){
+        if (mFragmentTitleDeedLoanBinding.titledeedLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentTitleDeedLoanBinding.titledeedErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentTitleDeedLoanBinding.titledeedLoanEditText.getText().toString()) < 25000) {
             mFragmentTitleDeedLoanBinding.titledeedErrorText.setText("Please enter amount above 25000");
-        }
-        else if(Integer.parseInt(mFragmentTitleDeedLoanBinding.titledeedLoanEditText.getText().toString()) > 2000000){
+        } else if (Integer.parseInt(mFragmentTitleDeedLoanBinding.titledeedLoanEditText.getText().toString()) > 2000000) {
             mFragmentTitleDeedLoanBinding.titledeedErrorText.setText("Should not exceed 2000000");
         }
     }

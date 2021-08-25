@@ -23,17 +23,12 @@ public class ChamaLoan extends Fragment {
     }
 
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentChamaLoanBinding = FragmentChamaLoanBinding.inflate(inflater,container,false);
+        mFragmentChamaLoanBinding = FragmentChamaLoanBinding.inflate(inflater, container, false);
         return mFragmentChamaLoanBinding.getRoot();
-
-
 
 
     }
@@ -41,15 +36,21 @@ public class ChamaLoan extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFragmentChamaLoanBinding.chamaLoanRequestBtn.setOnClickListener(v->chamaLoanRequest());
+        mFragmentChamaLoanBinding.chamaLoanRequestBtn.setOnClickListener(v -> chamaLoanRequest());
     }
 
     private void chamaLoanRequest() {
-        if(Integer.parseInt(mFragmentChamaLoanBinding.chamaLoanEditText.getText().toString()) < 50000){
+        if (mFragmentChamaLoanBinding.chamaLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentChamaLoanBinding.chamaErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentChamaLoanBinding.chamaLoanEditText.getText().toString()) < 50000) {
             mFragmentChamaLoanBinding.chamaErrorText.setText("Please amount above 50000");
-        }
-        else if (Integer.parseInt(mFragmentChamaLoanBinding.chamaLoanEditText.getText().toString())> 300000){
+        } else if (Integer.parseInt(mFragmentChamaLoanBinding.chamaLoanEditText.getText().toString()) > 300000) {
             mFragmentChamaLoanBinding.chamaErrorText.setText("Should not exceed 300000");
+        } else {
+            handleChamaLoanRequest();
         }
+    }
+
+    private void handleChamaLoanRequest() {
     }
 }

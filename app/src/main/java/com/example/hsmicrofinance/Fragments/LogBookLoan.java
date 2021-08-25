@@ -23,12 +23,11 @@ public class LogBookLoan extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentLogBookLoanBinding = FragmentLogBookLoanBinding.inflate(inflater,container,false);
+        mFragmentLogBookLoanBinding = FragmentLogBookLoanBinding.inflate(inflater, container, false);
         return mFragmentLogBookLoanBinding.getRoot();
     }
 
@@ -36,16 +35,22 @@ public class LogBookLoan extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mFragmentLogBookLoanBinding.logbookLoanRequestBtn.setOnClickListener(v->logBookRequestLoan() );
+        mFragmentLogBookLoanBinding.logbookLoanRequestBtn.setOnClickListener(v -> logBookRequestLoan());
 
     }
 
     private void logBookRequestLoan() {
-        if(Integer.parseInt(mFragmentLogBookLoanBinding.logbookLoanEditText.getText().toString()) < 10000) {
-           mFragmentLogBookLoanBinding.logbookErrorText.setText("Please enter 10000 and above");
-        }
-        else if(Integer.parseInt(mFragmentLogBookLoanBinding.logbookLoanEditText.getText().toString()) > 500000){
+        if (mFragmentLogBookLoanBinding.logbookLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentLogBookLoanBinding.logbookErrorText.setText("Cannot be Empty");
+        } else if (Integer.parseInt(mFragmentLogBookLoanBinding.logbookLoanEditText.getText().toString()) < 10000) {
+            mFragmentLogBookLoanBinding.logbookErrorText.setText("Please enter 10000 and above");
+        } else if (Integer.parseInt(mFragmentLogBookLoanBinding.logbookLoanEditText.getText().toString()) > 500000) {
             mFragmentLogBookLoanBinding.logbookErrorText.setText("Should not exceed 500000");
+        } else {
+            handleLogBookLoanRequest();
         }
+    }
+
+    private void handleLogBookLoanRequest() {
     }
 }

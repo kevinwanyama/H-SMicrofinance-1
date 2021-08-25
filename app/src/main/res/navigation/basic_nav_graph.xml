@@ -69,7 +69,17 @@
         android:id="@+id/basicInvestmentPackages"
         android:name="com.example.hsmicrofinance.Fragments.BasicInvestmentPackages"
         android:label="fragment_basic_investment_packages"
-        tools:layout="@layout/fragment_basic_investment_packages" />
+        tools:layout="@layout/fragment_basic_investment_packages" >
+        <action
+            android:id="@+id/action_basicInvestmentPackages_to_goldDeposit"
+            app:destination="@id/goldDeposit" />
+        <action
+            android:id="@+id/action_basicInvestmentPackages_to_platinumDeposit"
+            app:destination="@id/platinumDeposit" />
+        <action
+            android:id="@+id/action_basicInvestmentPackages_to_standardDeposit"
+            app:destination="@id/standardDeposit" />
+    </fragment>
     <fragment
         android:id="@+id/basicLoanHistory"
         android:name="com.example.hsmicrofinance.Fragments.BasicLoanHistory"
@@ -172,4 +182,16 @@
         android:name="com.example.hsmicrofinance.Fragments.TitleDeedLoan"
         android:label="fragment_title_deed_loan"
         tools:layout="@layout/fragment_title_deed_loan" />
+    <fragment
+        android:id="@+id/goldDeposit"
+        android:name="com.example.hsmicrofinance.Fragments.GoldDeposit"
+        android:label="GoldDeposit" />
+    <fragment
+        android:id="@+id/platinumDeposit"
+        android:name="com.example.hsmicrofinance.Fragments.PlatinumDeposit"
+        android:label="PlatinumDeposit" />
+    <fragment
+        android:id="@+id/standardDeposit"
+        android:name="com.example.hsmicrofinance.Fragments.StandardDeposit"
+        android:label="StandardDeposit" />
 </navigation>

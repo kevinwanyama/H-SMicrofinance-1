@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.GoldDeposit">
+    tools:context=".Fragments.LogBookLoan"
+    android:background="@color/fragment_background">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/pink"
+        android:layout_marginTop="120dp"
+        android:id="@+id/standard_error_text"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
 
-</FrameLayout>
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold Package"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark_blue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_blue"
+                android:text="Limit: Ksh 10000 - Ksh 100000"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Amount"
+                android:background="@drawable/round_edit_text"
+                android:padding="9dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/gold_package_edit_text"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposit"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/dark_blue"
+                android:textColor="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:id="@+id/gold_package_depost_btn"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

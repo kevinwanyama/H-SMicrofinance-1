@@ -23,29 +23,32 @@ public class KilimoLoan extends Fragment {
     }
 
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentKilimoLoanBinding = FragmentKilimoLoanBinding.inflate(inflater,container,false);
+        mFragmentKilimoLoanBinding = FragmentKilimoLoanBinding.inflate(inflater, container, false);
         return mFragmentKilimoLoanBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFragmentKilimoLoanBinding.kilimoLoanRequestBtn.setOnClickListener(v-> KilimoRequestLoan());
+        mFragmentKilimoLoanBinding.kilimoLoanRequestBtn.setOnClickListener(v -> KilimoRequestLoan());
     }
 
     private void KilimoRequestLoan() {
-        if(Integer.parseInt(mFragmentKilimoLoanBinding.kilimoLoanEditText.getText().toString()) < 5000){
+        if (mFragmentKilimoLoanBinding.kilimoLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentKilimoLoanBinding.kilimoErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentKilimoLoanBinding.kilimoLoanEditText.getText().toString()) < 5000) {
             mFragmentKilimoLoanBinding.kilimoErrorText.setText("Please enter amount above 5000");
-        }
-        else if(Integer.parseInt(mFragmentKilimoLoanBinding.kilimoLoanEditText.getText().toString()) > 140000){
+        } else if (Integer.parseInt(mFragmentKilimoLoanBinding.kilimoLoanEditText.getText().toString()) > 140000) {
             mFragmentKilimoLoanBinding.kilimoErrorText.setText("Should not exceed 140000");
+        } else {
+            handleKilimoLoanRequest();
         }
+    }
+
+    private void handleKilimoLoanRequest() {
     }
 }

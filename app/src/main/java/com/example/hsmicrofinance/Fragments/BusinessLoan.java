@@ -23,29 +23,32 @@ public class BusinessLoan extends Fragment {
     }
 
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentBusinessLoanBinding = FragmentBusinessLoanBinding.inflate(inflater,container,false);
+        mFragmentBusinessLoanBinding = FragmentBusinessLoanBinding.inflate(inflater, container, false);
         return mFragmentBusinessLoanBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFragmentBusinessLoanBinding.businessLoanRequestBtn.setOnClickListener(v->businessRequestLoan());
+        mFragmentBusinessLoanBinding.businessLoanRequestBtn.setOnClickListener(v -> businessRequestLoan());
     }
 
     private void businessRequestLoan() {
-        if(Integer.parseInt(mFragmentBusinessLoanBinding.businessLoanEditText.getText().toString())< 5000){
+        if (mFragmentBusinessLoanBinding.businessLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentBusinessLoanBinding.businessErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentBusinessLoanBinding.businessLoanEditText.getText().toString()) < 5000) {
             mFragmentBusinessLoanBinding.businessErrorText.setText("Please enter amount above 5000");
-        }
-        else if(Integer.parseInt(mFragmentBusinessLoanBinding.businessLoanEditText.getText().toString()) > 140000){
+        } else if (Integer.parseInt(mFragmentBusinessLoanBinding.businessLoanEditText.getText().toString()) > 140000) {
             mFragmentBusinessLoanBinding.businessErrorText.setText("Should not exceed 140000");
+        } else {
+            handleBusinessLoanRequest();
         }
+    }
+
+    private void handleBusinessLoanRequest() {
     }
 }

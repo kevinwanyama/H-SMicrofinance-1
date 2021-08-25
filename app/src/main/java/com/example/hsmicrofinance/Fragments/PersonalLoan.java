@@ -16,21 +16,18 @@ import com.example.hsmicrofinance.databinding.FragmentPersonalLoanBinding;
 
 public class PersonalLoan extends Fragment {
 
-   FragmentPersonalLoanBinding mFragmentPersonalLoanBinding;
+    FragmentPersonalLoanBinding mFragmentPersonalLoanBinding;
 
     public PersonalLoan() {
         // Required empty public constructor
     }
 
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentPersonalLoanBinding = FragmentPersonalLoanBinding.inflate(inflater,container,false);
+        mFragmentPersonalLoanBinding = FragmentPersonalLoanBinding.inflate(inflater, container, false);
         return mFragmentPersonalLoanBinding.getRoot();
     }
 
@@ -38,15 +35,21 @@ public class PersonalLoan extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mFragmentPersonalLoanBinding.personalLoanRequestBtn.setOnClickListener(v-> personalRequestLoan());
+        mFragmentPersonalLoanBinding.personalLoanRequestBtn.setOnClickListener(v -> personalRequestLoan());
     }
 
     private void personalRequestLoan() {
-        if(Integer.parseInt(mFragmentPersonalLoanBinding.personalLoanEditText.getText().toString()) < 5000){
+        if (mFragmentPersonalLoanBinding.personalLoanEditText.getText().toString().trim().isEmpty()) {
+            mFragmentPersonalLoanBinding.personalErrorText.setText("Cannot be empty");
+        } else if (Integer.parseInt(mFragmentPersonalLoanBinding.personalLoanEditText.getText().toString()) < 5000) {
             mFragmentPersonalLoanBinding.personalErrorText.setText("Please enter amount above 5000");
-        }
-        else if(Integer.parseInt(mFragmentPersonalLoanBinding.personalLoanEditText.getText().toString()) > 200000){
+        } else if (Integer.parseInt(mFragmentPersonalLoanBinding.personalLoanEditText.getText().toString()) > 200000) {
             mFragmentPersonalLoanBinding.personalErrorText.setText("Should not exceed 200000");
+        } else {
+            handlePersonalLoanRequest();
         }
+    }
+
+    private void handlePersonalLoanRequest() {
     }
 }
