@@ -5,38 +5,60 @@
         <variable
             name="LatestTransaction"
             type="com.example.hsmicrofinance.entity.LatestTransaction" />
+        <variable
+            name="latestTransactionInterface"
+            type="com.example.hsmicrofinance.adapters.LatestTransactionAdapter.LatestTransactionInterface" />
     </data>
-
-    <RelativeLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{()->latestTransactionInterface.onClickTransaction(LatestTransaction)}"
+        android:layout_marginBottom="7dp">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_centerHorizontal="true">
+            android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="130dp"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{LatestTransaction.type}" />
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:text="@{LatestTransaction.date}" />
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{LatestTransaction.status}"
-                android:layout_gravity="right" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:text="@{LatestTransaction.type}" />
 
-        </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="105dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+                    android:text="@{LatestTransaction.date}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginRight="20dp"
+                    android:text="@{String.valueOf(LatestTransaction.amount)}"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
 </layout>

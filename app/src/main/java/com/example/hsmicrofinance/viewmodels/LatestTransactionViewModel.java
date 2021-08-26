@@ -1,5 +1,6 @@
-package com.example.hsmicrofinance.Viewmodels;
+package com.example.hsmicrofinance.viewmodels;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -13,13 +14,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class latestTransactionViewModel extends ViewModel {
+public class LatestTransactionViewModel extends ViewModel {
 
     private APIService mApiService;
     private Call<List<LatestTransaction>> mCall;
     private MutableLiveData<List<LatestTransaction>> mLatestTransactionMutableLiveData;
+    MutableLiveData<LatestTransaction>mLiveData = new MutableLiveData<>();
 
-    public latestTransactionViewModel() {
+    public LatestTransactionViewModel() {
         mLatestTransactionMutableLiveData = new MutableLiveData<>();
 
     }
@@ -40,5 +42,12 @@ public class latestTransactionViewModel extends ViewModel {
                 mLatestTransactionMutableLiveData.postValue(null);
             }
         });
+    }
+
+    public LiveData<LatestTransaction>getLatestTransaction(){
+        return mLiveData;
+    }
+    public void setLatestTransaction(LatestTransaction latestTransaction){
+        mLiveData.setValue(latestTransaction);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.hsmicrofinance.Adapters;
+package com.example.hsmicrofinance.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,20 +14,25 @@ import com.example.hsmicrofinance.databinding.LatestTransactionsBinding;
 import java.util.List;
 
 public class LatestTransactionAdapter extends ListAdapter<LatestTransaction,LatestTransactionAdapter.LatestTransactionViewholder> {
-    LatestTransactionsBinding mLatestTransactionsBinding;
+   public LatestTransactionsBinding mLatestTransactionsBinding;
+  public LatestTransactionInterface mLatestTransactionInterface;
     private Context mContext;
     private List<LatestTransaction> mLatestTransactions;
     private LatestTransaction mLatestTransaction;
     private LayoutInflater mLayoutInflater;
 
-    public LatestTransactionAdapter(Context context, List<LatestTransaction> latestTransactions) {
+    public LatestTransactionAdapter(Context context, List<LatestTransaction> latestTransactions, LatestTransactionInterface latestTransactionInterface) {
         super(LatestTransaction.sItemCallback);
         this.mContext = context;
         this.mLatestTransactions = latestTransactions;
+        this.mLatestTransactionInterface = latestTransactionInterface;
     }
     public void setLatestTransactions(List<LatestTransaction> latestTransactions){
         this.mLatestTransactions = latestTransactions;
         notifyDataSetChanged();
+    }
+    public interface LatestTransactionInterface {
+        void onClickTransaction(LatestTransaction latestTransaction);
     }
 
     @NonNull
@@ -35,6 +40,7 @@ public class LatestTransactionAdapter extends ListAdapter<LatestTransaction,Late
     public LatestTransactionViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         mLayoutInflater = LayoutInflater.from(parent.getContext());
         mLatestTransactionsBinding = LatestTransactionsBinding.inflate(mLayoutInflater, parent, false);
+        mLatestTransactionsBinding.setLatestTransactionInterface(mLatestTransactionInterface);
         return new LatestTransactionViewholder(mLatestTransactionsBinding);
     }
 

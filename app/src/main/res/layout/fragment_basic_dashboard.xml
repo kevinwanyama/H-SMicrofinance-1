@@ -169,11 +169,12 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="Type"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/dark_blue"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="110dp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="30dp"
             android:layout_height="wrap_content"
             android:text="Date"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -182,7 +183,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status"
+            android:text="Amount"
             android:textColor="@color/dark_blue"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_gravity="right"/>

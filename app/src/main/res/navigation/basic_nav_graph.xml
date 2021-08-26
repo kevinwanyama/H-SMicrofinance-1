@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_basicDashboard_to_basicWithdrawMoney"
             app:destination="@id/basicWithdrawMoney" />
+        <action
+            android:id="@+id/action_basicDashboard_to_singleTransaction"
+            app:destination="@id/singleTransaction" />
     </fragment>
     <fragment
         android:id="@+id/basicDepositHistory"
@@ -64,7 +67,11 @@
         android:id="@+id/basicInvestmentHistory"
         android:name="com.example.hsmicrofinance.Fragments.BasicInvestmentHistory"
         android:label="fragment_basic_investment_history"
-        tools:layout="@layout/fragment_basic_investment_history" />
+        tools:layout="@layout/fragment_basic_investment_history" >
+        <action
+            android:id="@+id/action_basicInvestmentHistory_to_singleInvestmentHistory"
+            app:destination="@id/singleInvestmentHistory" />
+    </fragment>
     <fragment
         android:id="@+id/basicInvestmentPackages"
         android:name="com.example.hsmicrofinance.Fragments.BasicInvestmentPackages"
@@ -194,4 +201,13 @@
         android:id="@+id/standardDeposit"
         android:name="com.example.hsmicrofinance.Fragments.StandardDeposit"
         android:label="StandardDeposit" />
+    <fragment
+        android:id="@+id/singleTransaction"
+        android:name="com.example.hsmicrofinance.Fragments.SingleTransaction"
+        android:label="fragment_single_transaction"
+        tools:layout="@layout/fragment_single_transaction" />
+    <fragment
+        android:id="@+id/singleInvestmentHistory"
+        android:name="com.example.hsmicrofinance.Fragments.SingleInvestmentHistory"
+        android:label="SingleInvestmentHistory" />
 </navigation>

@@ -9,34 +9,35 @@ import androidx.recyclerview.widget.DiffUtil;
 import java.util.Objects;
 
 public class LatestTransaction implements Parcelable {
-    private String TrxID;
-    private int Amount;
-    private int Balance;
-    private int Fee;
-    private String Type;
-    private String Status;
+    private String trxID;
+
+    private int amount;
+    private int balance;
+    private int fee;
+    private String type;
+    private String status;
     private String date;
 
     public LatestTransaction() {
     }
 
     public LatestTransaction(String trxID, int amount, int balance, int fee, String type, String status, String date) {
-        this.TrxID = trxID;
-        this.Amount = amount;
-        this.Balance = balance;
-        this.Fee = fee;
-        this.Type = type;
-        this.Status = status;
+        this.trxID = trxID;
+        this.amount = amount;
+        this.balance = balance;
+        this.fee = fee;
+        this.type = type;
+        this.status = status;
         this.date = date;
     }
 
     protected LatestTransaction(Parcel in) {
-        TrxID = in.readString();
-        Amount = in.readInt();
-        Balance = in.readInt();
-        Fee = in.readInt();
-        Type = in.readString();
-        Status = in.readString();
+        trxID = in.readString();
+        amount = in.readInt();
+        balance = in.readInt();
+        fee = in.readInt();
+        type = in.readString();
+        status = in.readString();
         date = in.readString();
     }
 
@@ -53,51 +54,51 @@ public class LatestTransaction implements Parcelable {
     };
 
     public String getTrxID() {
-        return TrxID;
+        return trxID;
     }
 
     public void setTrxID(String trxID) {
-        TrxID = trxID;
+        trxID = trxID;
     }
 
     public int getAmount() {
-        return Amount;
+        return amount;
     }
 
     public void setAmount(int amount) {
-        Amount = amount;
+        this.amount = amount;
     }
 
     public int getBalance() {
-        return Balance;
+        return balance;
     }
 
     public void setBalance(int balance) {
-        Balance = balance;
+        this.balance = balance;
     }
 
     public int getFee() {
-        return Fee;
+        return fee;
     }
 
     public void setFee(int fee) {
-        Fee = fee;
+        this.fee = fee;
     }
 
     public String getType() {
-        return Type;
+        return type;
     }
 
     public void setType(String type) {
-        Type = type;
+        this.type = type;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getDate() {
@@ -130,12 +131,12 @@ public class LatestTransaction implements Parcelable {
     @Override
     public String toString() {
         return "LatestTransaction{" +
-                "TrxID='" + TrxID + '\'' +
-                ", Amount=" + Amount +
-                ", Balance=" + Balance +
-                ", Fee=" + Fee +
-                ", Type='" + Type + '\'' +
-                ", Status='" + Status + '\'' +
+                "TrxID='" + trxID + '\'' +
+                ", Amount=" + amount +
+                ", Balance=" + balance +
+                ", Fee=" + fee +
+                ", Type='" + type + '\'' +
+                ", Status='" + status + '\'' +
                 ", date=" + date +
                 '}';
     }
@@ -147,12 +148,12 @@ public class LatestTransaction implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(TrxID);
-        dest.writeInt(Amount);
-        dest.writeInt(Balance);
-        dest.writeInt(Fee);
-        dest.writeString(Type);
-        dest.writeString(Status);
+        dest.writeString(trxID);
+        dest.writeInt(amount);
+        dest.writeInt(balance);
+        dest.writeInt(fee);
+        dest.writeString(type);
+        dest.writeString(status);
         dest.writeString(date);
     }
 
