@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.LogBookLoan"
     android:background="@color/fragment_background">
 
@@ -42,14 +43,22 @@
                 android:text="Limit: Ksh 500 - Ksh 20000"
                 android:layout_marginTop="20dp"/>
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Amount"
-                android:background="@drawable/round_edit_text"
-                android:padding="9dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/standard_package_edit_text"/>
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/dark_blue"
+                app:hintTextColor="@color/dark_green"
+                android:layout_marginTop="30dp"
+               >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/standard_package_edit_text"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
