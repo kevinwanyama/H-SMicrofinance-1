@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.LogBookLoan"
-    android:background="@color/fragment_background">
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.appcompat.widget.AppCompatTextView
@@ -13,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@color/pink"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/titledeed_error_text"/>
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="320dp"
-        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_height="360dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="20dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         >
@@ -31,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title Deed Loans"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="35dp"
                 android:textColor="@color/dark_blue"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
             <androidx.appcompat.widget.AppCompatTextView
@@ -40,7 +42,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/dark_blue"
                 android:text="Limit: Ksh 25000 - Ksh 200000"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="30dp"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,13 +59,13 @@
                     android:id="@+id/titledeed_loan_edit_text"
                     android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Request Loan"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@color/dark_blue"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/dark_blue"
                 android:textColor="@color/white"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"

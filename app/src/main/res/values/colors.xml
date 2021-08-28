@@ -14,4 +14,5 @@
     <color name="fragment_background">#f0f8ff</color>
     <color name="dark_green">#297545</color>
     <color name="package_background">#e53b24</color>
+    <color name="ghostwhite">#fffafa</color>
 </resources>

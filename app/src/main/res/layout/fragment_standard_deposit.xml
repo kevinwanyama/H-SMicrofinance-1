@@ -1,75 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.LogBookLoan"
-    android:background="@color/fragment_background">
+    android:background="@color/fragment_background"
+    tools:context=".Fragments.LogBookLoan">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/standard_error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/pink"
-        android:layout_marginTop="120dp"
-        android:id="@+id/standard_error_text"/>
+        android:layout_marginTop="70dp"
+        android:textColor="@color/pink" />
+
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="320dp"
-        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_height="360dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        >
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:padding="10dp">
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:text="Standard Package"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/dark_blue"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/dark_blue" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/dark_blue"
+                android:layout_marginTop="30dp"
                 android:text="Limit: Ksh 500 - Ksh 20000"
-                android:layout_marginTop="20dp"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_blue" />
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Amount"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:endIconMode="clear_text"
-                app:boxStrokeColor="@color/dark_blue"
-                app:hintTextColor="@color/dark_green"
                 android:layout_marginTop="30dp"
-               >
+                android:hint="Enter Amount"
+                app:boxStrokeColor="@color/dark_blue"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/dark_green">
+
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/standard_package_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/standard_package_edit_text"
-                    android:inputType="number"/>
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
-            <androidx.appcompat.widget.AppCompatButton
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/standard_package_depost_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deposit"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@color/dark_blue"
-                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/dark_blue"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:id="@+id/standard_package_depost_btn"/>
+                android:text="Deposit"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

@@ -69,18 +69,18 @@
                     android:textColor="@color/dark_blue"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/std_return"/>
-                <androidx.appcompat.widget.AppCompatButton
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/std_deposit_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/deposit_now"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/std_return"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/dark_green"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
                     android:layout_marginBottom="5dp"
-                    android:id="@+id/std_deposit_btn"
-                    />
+                    android:backgroundTint="@color/dark_green"
+                    android:text="@string/deposit_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -141,19 +141,19 @@
                     android:textColor="@color/dark_blue"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/gold_return"/>
-                <androidx.appcompat.widget.AppCompatButton
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/gold_deposit_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:padding="7dp"
-                    android:text="@string/deposit_now"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/gold_return"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/dark_green"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
                     android:layout_marginBottom="5dp"
-                    android:id="@+id/gold_deposit_btn"
-                    />
+                    android:backgroundTint="@color/dark_green"
+                    android:padding="7dp"
+                    android:text="@string/deposit_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -214,19 +214,19 @@
                     android:textColor="@color/dark_blue"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/platinum_return"/>
-                <androidx.appcompat.widget.AppCompatButton
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/platinum_deposit_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:padding="7dp"
-                    android:text="@string/deposit_now"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/platinum_return"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/dark_green"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
                     android:layout_marginBottom="5dp"
-                    android:id="@+id/platinum_deposit_btn"
-                    />
+                    android:backgroundTint="@color/dark_green"
+                    android:padding="7dp"
+                    android:text="@string/deposit_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>

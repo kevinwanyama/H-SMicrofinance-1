@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/fragment_background">
+    >
 
     <TextView
         android:id="@+id/transfer"
@@ -85,20 +85,20 @@
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/payfriend_submit_btn"
-            android:layout_width="124dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/amount_layout"
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp"
-            android:background="@color/dark_blue"
+            android:backgroundTint="@color/dark_blue"
             android:text="Submit"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="20dp"
             />
     </RelativeLayout>
 
