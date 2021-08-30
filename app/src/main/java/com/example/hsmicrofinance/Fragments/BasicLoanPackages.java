@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -14,12 +15,14 @@ import android.view.ViewGroup;
 
 import com.example.hsmicrofinance.R;
 import com.example.hsmicrofinance.databinding.FragmentBasicLoanPackagesBinding;
+import com.example.hsmicrofinance.viewmodels.LoanPackageViewModel;
 
 
 public class BasicLoanPackages extends Fragment {
 
     FragmentBasicLoanPackagesBinding mFragmentBasicLoanPackagesBinding;
     private NavController mNavController;
+    private LoanPackageViewModel mLoanPackageViewModel;
 
     public BasicLoanPackages() {
         // Required empty public constructor
@@ -46,5 +49,8 @@ public class BasicLoanPackages extends Fragment {
         mFragmentBasicLoanPackagesBinding.personalPackageBtn.setOnClickListener(v->mNavController.navigate(R.id.action_basicLoanPackages_to_personalLoan));
         mFragmentBasicLoanPackagesBinding.titleDeedPackageBtn.setOnClickListener(v->mNavController.navigate(R.id.action_basicLoanPackages_to_titleDeedLoan));
         mFragmentBasicLoanPackagesBinding.chamaPackageBtn.setOnClickListener(v->mNavController.navigate(R.id.action_basicLoanPackages_to_chamaLoan));
+
+        mLoanPackageViewModel = new ViewModelProvider(requireActivity()).get(LoanPackageViewModel.class);
+        mLoanPackageViewModel.makeAPIcall();
     }
 }

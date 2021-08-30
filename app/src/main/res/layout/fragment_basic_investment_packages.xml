@@ -188,15 +188,16 @@
                     android:textStyle="bold"
                     android:textColor="@color/dark_blue"
                     android:id="@+id/platinum_text"/>
+
                 <TextView
+                    android:id="@+id/platinum_range"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/limit_ksh_20000_ksh_250000"
                     android:layout_below="@id/platinum_text"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/dark_blue"
+                    android:text="@string/limit_ksh_20000_ksh_250000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:id="@+id/platinum_range"/>
+                    android:textColor="@color/dark_blue" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
