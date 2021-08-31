@@ -5,20 +5,26 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hsmicrofinance.R;
 import com.example.hsmicrofinance.databinding.FragmentBasicLoanPackagesBinding;
+import com.example.hsmicrofinance.entity.Example;
 import com.example.hsmicrofinance.viewmodels.LoanPackageViewModel;
+
+import java.util.List;
 
 
 public class BasicLoanPackages extends Fragment {
+    private static final String TAG = "BasicLoanPackages";
 
     FragmentBasicLoanPackagesBinding mFragmentBasicLoanPackagesBinding;
     private NavController mNavController;
@@ -51,6 +57,13 @@ public class BasicLoanPackages extends Fragment {
         mFragmentBasicLoanPackagesBinding.chamaPackageBtn.setOnClickListener(v->mNavController.navigate(R.id.action_basicLoanPackages_to_chamaLoan));
 
         mLoanPackageViewModel = new ViewModelProvider(requireActivity()).get(LoanPackageViewModel.class);
-        mLoanPackageViewModel.makeAPIcall();
+        try{
+            mLoanPackageViewModel.getPackagesObserver().observe(getViewLifecycleOwner(), examples -> Log.d(TAG, "onChanged: " + examples));
+            mLoanPackageViewModel.makeAPIcall();
+        }catch (Exception e){
+            
+            e.printStackTrace();
+        }
+
     }
 }

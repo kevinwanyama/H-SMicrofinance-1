@@ -28,14 +28,19 @@ public class LoanPackageViewModel extends ViewModel {
         mListMutableLiveData = new MutableLiveData<>();
     }
 
+    public MutableLiveData<List<Example>>getPackagesObserver(){
+        return mListMutableLiveData;
+    }
+
     public void makeAPIcall(){
         mAPIService = RetrofitInstance.getRetroClient().create(APIService.class);
         mCall = mAPIService.getAllLoanPackages();
         mCall.enqueue(new Callback<List<Example>>() {
             @Override
             public void onResponse(Call<List<Example>> call, Response<List<Example>> response) {
-                Log.d(TAG, "onResponse: "+ response.body());
+
                 mListMutableLiveData.postValue(response.body());
+                Log.d(TAG, "onResponse: "+ response.body());
             }
 
             @Override
