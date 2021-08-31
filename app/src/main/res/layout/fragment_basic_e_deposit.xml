@@ -12,17 +12,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
-        android:text="Deposit  edhfuiwheuighwen money to my H&amp;S Group Account"
+        android:text="Deposit money to my H&amp;S Group Account"
         android:textColor="#297545"
         android:textSize="20dp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
+        android:layout_width="200dp"
+        android:id="@+id/cardview2"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/cardview1">
+
+        <ImageView
+            android:id="@+id/mobilemoney_pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/mobile_money" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mobilemoneytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:text="Mobile Money"
+                android:textColor="#37517E"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mobilemoney_password_change_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilemoneytxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#297545"
+                android:padding="10dp"
+                android:text="Deposit Now"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:id="@+id/cardview1"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
@@ -30,8 +81,8 @@
 
         <ImageView
             android:id="@+id/credit_pic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginStart="30dp"
             android:src="@drawable/credit_pic" />
 
@@ -39,18 +90,38 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
+                android:id="@+id/creditdebit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:text="Credit/Debit Card"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:text="Credit/Debit Card"
                 android:textColor="#37517E"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/credit_depit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/creditdebit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#297545"
+                android:padding="10dp"
+                android:text="Deposit Now"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                app:cornerRadius="8dp" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 
 </RelativeLayout>
