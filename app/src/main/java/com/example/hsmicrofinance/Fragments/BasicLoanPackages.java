@@ -61,7 +61,7 @@ public class BasicLoanPackages extends Fragment {
             mLoanPackageViewModel.getPackagesObserver().observe(getViewLifecycleOwner(), examples -> Log.d(TAG, "onChanged: " + examples));
             mLoanPackageViewModel.makeAPIcall();
         }catch (Exception e){
-            
+
             e.printStackTrace();
         }
 
