@@ -10,6 +10,7 @@
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/drawable/cardback.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/activity_splash_screen.xml" value="0.18262411347517732" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_dashboard.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_investment_history.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_investment_packages.xml" value="0.196875" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_loan_packages.xml" value="0.196875" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_pay_loans.xml" value="0.15625" />
@@ -23,9 +24,12 @@
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_log_book_loan.xml" value="0.196875" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_personal_loan.xml" value="0.196875" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_platinum_deposit.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_single_investment_history.xml" value="0.36974358974358973" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_single_transaction.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_standard_deposit.xml" value="0.25" />
         <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_title_deed_loan.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/investment_history_item.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/latest_transactions.xml" value="0.14895833333333333" />
       </map>
     </option>
   </component>

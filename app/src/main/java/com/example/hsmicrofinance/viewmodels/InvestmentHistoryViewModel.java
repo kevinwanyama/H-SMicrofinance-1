@@ -1,5 +1,7 @@
 package com.example.hsmicrofinance.viewmodels;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -15,6 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class InvestmentHistoryViewModel extends ViewModel {
+    private static final String TAG = "Invest";
     public APIService mService;
     public Call<List<InvestmentHistory>>mCall;
     public MutableLiveData<List<InvestmentHistory>>mInvestmentHistoryMutableLiveData;
@@ -33,6 +36,7 @@ public class InvestmentHistoryViewModel extends ViewModel {
         mCall.enqueue(new Callback<List<InvestmentHistory>>() {
             @Override
             public void onResponse(Call<List<InvestmentHistory>> call, Response<List<InvestmentHistory>> response) {
+                Log.d(TAG, "onResponse: "+ response.body());
                 mInvestmentHistoryMutableLiveData.postValue(response.body());
             }
 

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="10dp"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.BasicDashboard">
@@ -154,49 +155,52 @@
         android:layout_marginTop="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         />
+
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:id="@+id/transaction_top"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/latest_transaction_text"
         android:layout_centerHorizontal="true"
-        >
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="130dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Type"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/dark_blue"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            android:text="Type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/dark_blue" />
+
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="100dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:text="Date"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/dark_blue"
-            />
+            android:textColor="@color/dark_blue" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:text="Amount"
-            android:textColor="@color/dark_blue"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:layout_gravity="right"/>
+            android:textColor="@color/dark_blue" />
 
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/latest_transaction_recyclerview"
         android:layout_width="350dp"
         android:layout_height="400dp"
-        android:layout_marginLeft="10dp"
         android:layout_below="@id/transaction_top"
-        tools:listitem="@layout/latest_transactions"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:id="@+id/latest_transaction_recyclerview"/>
+        tools:listitem="@layout/latest_transactions" />
 
 
 </RelativeLayout>

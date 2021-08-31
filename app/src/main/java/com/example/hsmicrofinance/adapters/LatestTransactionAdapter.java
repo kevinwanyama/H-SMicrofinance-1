@@ -21,6 +21,7 @@ public class LatestTransactionAdapter extends ListAdapter<LatestTransaction,Late
     private LatestTransaction mLatestTransaction;
     private LayoutInflater mLayoutInflater;
 
+
     public LatestTransactionAdapter(Context context, List<LatestTransaction> latestTransactions, LatestTransactionInterface latestTransactionInterface) {
         super(LatestTransaction.sItemCallback);
         this.mContext = context;
