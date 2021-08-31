@@ -5,24 +5,28 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hsmicrofinance.R;
-import com.example.hsmicrofinance.databinding.FragmentBasicEDepositBinding;
+import com.example.hsmicrofinance.databinding.FragmentAccountSettingBinding;
 
 
-public class BasicEDeposit extends Fragment {
+public class AccountSetting extends Fragment {
 
-    private static final String TAG = "BasicEdeposit";
 
-FragmentBasicEDepositBinding mFragmentBasicEDepositBinding;
-    public BasicEDeposit() {
+FragmentAccountSettingBinding mFragmentAccountSettingBinding;
+    private NavController mNavController;
+
+    public AccountSetting() {
         // Required empty public constructor
     }
+
+
 
 
 
@@ -30,14 +34,15 @@ FragmentBasicEDepositBinding mFragmentBasicEDepositBinding;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentBasicEDepositBinding = FragmentBasicEDepositBinding.inflate(inflater,container,false);
-        return mFragmentBasicEDepositBinding.getRoot();
+        mFragmentAccountSettingBinding = FragmentAccountSettingBinding.inflate(inflater,container,false);
+        return mFragmentAccountSettingBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.d(TAG, "onViewCreated: "+ "created");
-        Log.d(TAG, "onViewCreated: "+"test");
+        mNavController = Navigation.findNavController(view);
+        mFragmentAccountSettingBinding.passwordAccountSetting.setOnClickListener(v-> mNavController.navigate(R.id.action_accountSetting_to_passwordChange));
+
     }
 }

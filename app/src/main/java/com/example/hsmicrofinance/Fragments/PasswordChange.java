@@ -5,24 +5,26 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hsmicrofinance.R;
-import com.example.hsmicrofinance.databinding.FragmentBasicEDepositBinding;
+import com.example.hsmicrofinance.databinding.FragmentPasswordChangeBinding;
 
 
-public class BasicEDeposit extends Fragment {
+public class PasswordChange extends Fragment {
+FragmentPasswordChangeBinding mFragmentPasswordChangeBinding;
 
-    private static final String TAG = "BasicEdeposit";
+    private NavController mNavController;
 
-FragmentBasicEDepositBinding mFragmentBasicEDepositBinding;
-    public BasicEDeposit() {
+    public PasswordChange() {
         // Required empty public constructor
     }
+
 
 
 
@@ -30,14 +32,15 @@ FragmentBasicEDepositBinding mFragmentBasicEDepositBinding;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mFragmentBasicEDepositBinding = FragmentBasicEDepositBinding.inflate(inflater,container,false);
-        return mFragmentBasicEDepositBinding.getRoot();
+        mFragmentPasswordChangeBinding = FragmentPasswordChangeBinding.inflate(inflater,container,false);
+        return mFragmentPasswordChangeBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.d(TAG, "onViewCreated: "+ "created");
-        Log.d(TAG, "onViewCreated: "+"test");
+        mNavController = Navigation.findNavController(view);
+
+        mFragmentPasswordChangeBinding.updatePasswordChangepage.setOnClickListener(v->mNavController.navigate(R.id.action_passwordChange_to_updateSecurityCode));
     }
 }

@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.example.hsmicrofinance.databinding.FragmentBasicPayLoansBinding;
 
 
 public class BasicPayLoans extends Fragment {
+    private static final String TAG = "Payloans";
 
    FragmentBasicPayLoansBinding mFragmentBasicPayLoansBinding;
 
@@ -37,6 +39,7 @@ public class BasicPayLoans extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.d(TAG, "onViewCreated: "+ "paylaon");
         mFragmentBasicPayLoansBinding.payloanSubmitBtn.setOnClickListener(v-> executePayloan());
     }
 
