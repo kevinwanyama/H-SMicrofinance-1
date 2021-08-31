@@ -38,5 +38,6 @@ FragmentBasicEDepositBinding mFragmentBasicEDepositBinding;
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d(TAG, "onViewCreated: "+ "created");
+        Log.d(TAG, "onViewCreated: "+"test");
     }
 }
