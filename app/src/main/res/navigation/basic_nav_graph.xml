@@ -133,7 +133,11 @@
         android:id="@+id/basicSettings"
         android:name="com.example.hsmicrofinance.Fragments.BasicSettings"
         android:label="fragment_basic_settings"
-        tools:layout="@layout/fragment_basic_settings" />
+        tools:layout="@layout/fragment_basic_settings" >
+        <action
+            android:id="@+id/action_basicSettings_to_accountSetting"
+            app:destination="@id/accountSetting" />
+    </fragment>
     <fragment
         android:id="@+id/basicStatement"
         android:name="com.example.hsmicrofinance.Fragments.BasicStatement"
@@ -210,4 +214,27 @@
         android:id="@+id/singleInvestmentHistory"
         android:name="com.example.hsmicrofinance.Fragments.SingleInvestmentHistory"
         android:label="SingleInvestmentHistory" />
+    <fragment
+        android:id="@+id/accountSetting"
+        android:name="com.example.hsmicrofinance.Fragments.AccountSetting"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" >
+        <action
+            android:id="@+id/action_accountSetting_to_passwordChange"
+            app:destination="@id/passwordChange" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordChange"
+        android:name="com.example.hsmicrofinance.Fragments.PasswordChange"
+        android:label="fragment_password_change"
+        tools:layout="@layout/fragment_password_change" >
+        <action
+            android:id="@+id/action_passwordChange_to_updateSecurityCode"
+            app:destination="@id/updateSecurityCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSecurityCode"
+        android:name="com.example.hsmicrofinance.Fragments.UpdateSecurityCode"
+        android:label="fragment_update_security_code"
+        tools:layout="@layout/fragment_update_security_code" />
 </navigation>
