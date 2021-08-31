@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.BasicSettings">
+    android:background="@color/fragment_background"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/enter_pass"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="settingsweewsssws" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Enter Password to access Your setting "
+        android:textAlignment="center"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"
+        android:textSize="20dp" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/enter_pass"
+        android:background="@color/white"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enterCurrentPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter your current Password"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/submitbutton"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enterCurrentPassword"
+            android:layout_margin="10dp"
+            android:background="@color/dark_blue"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
